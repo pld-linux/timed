@@ -10,7 +10,7 @@ Source2:	timedu.inetd
 Patch0:		netkit-timed-0.10-misc.patch
 Patch1:		timed-0.10-ifr.patch
 Patch2:		timed-0.10-maint.patch
-Requires:	inetd
+Prereq:		rc-inetd
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
