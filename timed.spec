@@ -14,6 +14,7 @@ Source0:	ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-%{name}-%{ver
 Patch0:		%{name}-gcc2.96.patch
 Patch1:		%{name}-DoS.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	intimed
 
 %description
 The timed package contains the timed daemon and the timedc program for
