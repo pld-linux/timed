@@ -5,4 +5,4 @@ PORT=37
 FLAGS=wait
 USER=nobody
 SERVER=tcpd
-DAEMON=/usr/sbin/timed
+DAEMON=/usr/sbin/in.timed
