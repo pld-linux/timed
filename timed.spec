@@ -4,13 +4,14 @@ Summary(fr):	Serveur horaire TCP/IP
 Summary(pl):	Serwer us³ugi umo¿liwiaj±cej synchronizacjê czasu miêdzy komputerami
 Summary(tr):	TCP/IP günün saati sunucusu
 Name:		timed
-Version:	0.16
-Release:	3
+Version:	0.17
+Release:	0
 Copyright:	BSD
 Group:		Daemons
 Group(pl):	Serwery
-Source:		ftp://sunsite.unc.edu/pub/Linux/system/admin/time/netkit-timed-%{version}.tar.gz
-Patch0:		netkit-timed-cflags.patch
+Source:		ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-timed-%{version}.tar.gz
+# Does not exists in repo!
+# Patch0:		netkit-timed-cflags.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,7 +52,8 @@ tutulabilmeleri amacýyla kullanýlýr.
 
 %prep
 %setup -q -n netkit-timed-%{version}
-%patch -p1
+# Does not exists in repo!
+# %patch -p1
 
 %build
 ./configure
