@@ -11,6 +11,8 @@ Group:		Daemons
 Group(de):	Server
 Group(pl):	Serwery
 Source0:	ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-%{name}-%{version}.tar.gz
+Patch0:		%{name}-gcc2.96.patch
+Patch1:		%{name}-DoS.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,9 +55,11 @@ saatlerinin eþ tutulabilmeleri amacýyla kullanýlýr.
 
 %prep
 %setup -q -n netkit-timed-%{version}
+%patch0 -p1
+%patch1 -p1
 
 %build
-CFLAGS=%{rpmcflags}; export CFLAGS
+CFLAGS="%{rpmcflags}"; export CFLAGS
 ./configure --with-c-compiler=gcc
 %{__make}
 
