@@ -5,13 +5,11 @@ Summary(pl):	Serwer us³ugi umo¿liwiaj±cej synchronizacjê czasu miêdzy komputeram
 Summary(tr):	TCP/IP günün saati sunucusu
 Name:		timed
 Version:	0.17
-Release:	0
+Release:	1
 Copyright:	BSD
 Group:		Daemons
 Group(pl):	Serwery
 Source:		ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-timed-%{version}.tar.gz
-# Does not exists in repo!
-# Patch0:		netkit-timed-cflags.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -52,12 +50,11 @@ tutulabilmeleri amacýyla kullanýlýr.
 
 %prep
 %setup -q -n netkit-timed-%{version}
-# Does not exists in repo!
-# %patch -p1
 
 %build
-./configure
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+CFLAGS=$RPM_OPT_FLAGS ; export CFLAGS
+./configure --with-c-compiler=gcc
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
