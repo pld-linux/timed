@@ -1,15 +1,15 @@
-Summary: Programs for maintaining networked machines' time synchronization.
-Name: timed
-Version: 0.10
-Release: 23
-Copyright: BSD
-Group: System Environment/Daemons
-Source: ftp://sunsite.unc.edu/pub/Linux/system/admin/time/netkit-timed-0.10.tar.gz
-Patch0: netkit-timed-0.10-misc.patch
-Patch1: timed-0.10-ifr.patch
-Patch2: timed-0.10-maint.patch
-Requires: inetd
-Buildroot: /var/tmp/%{name}-root
+Summary:	Programs for maintaining networked machines' time synchronization.
+Name:		timed
+Version:	0.10
+Release:	24
+Copyright:	BSD
+Group:		System Environment/Daemons
+Source:		ftp://sunsite.unc.edu/pub/Linux/system/admin/time/netkit-timed-%{version}.tar.gz
+Patch0:		netkit-timed-0.10-misc.patch
+Patch1:		timed-0.10-ifr.patch
+Patch2:		timed-0.10-maint.patch
+Requires:	inetd
+Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
 The timed package contains the timed daemon and the timedc program
@@ -23,25 +23,31 @@ machines' times in synchronization.
 
 %prep
 %setup -q -n netkit-timed-0.10
-%patch0 -p1 -b .misc
-%patch1 -p1 -b .ifr
-%patch2 -p1 -b .maint
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/usr/{bin,sbin}
-mkdir -p $RPM_BUILD_ROOT/usr/man/man{1,8}
-make INSTALLROOT=$RPM_BUILD_ROOT install
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_sbindir},%{_mandir}/man{1,8}}
+
+make install \
+	INSTALLROOT=$RPM_BUILD_ROOT \
+	MANDIR=%{_mandir}
+
+strip --strip-unneeded $RPM_BUILD_ROOT%{_sbindir}/*
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
-/usr/man/man8/timed.8
-/usr/man/man8/timedc.8
-/usr/sbin/timed
-/usr/sbin/timedc
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_sbindir}/timed
+%attr(700,root,root) %{_sbindir}/timedc
+%{_mandir}/man8/timed.8*
+%{_mandir}/man8/timedc.8*
