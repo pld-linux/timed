@@ -1,0 +1,8 @@
+SERVICE_NAME=time
+SOCK_TYPE=stream
+PROTOCOL=tcp
+PORT=37
+FLAGS=nowait
+USER=nobody
+SERVER=tcpd
+DAEMON=/usr/sbin/timed
