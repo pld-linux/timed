@@ -42,7 +42,7 @@ Pakiet timed zawiera serwer us³ugi serwuj±cej bie¿±cy czas o nazwie
 timed i program timedc umo¿liwiaj±ce kontrolê programu timed. Program
 timedc umo¿liwia m.in.:
 
-- pomiar w ustawienaich czasu miêdzy komputerami,
+- pomiar w ustawieniach czasu miêdzy komputerami,
 - odszukiwanie nadrzêdnych serwerów czasu,
 - w³±czanie i wy³±czanie ¶ledzenia komunikatów otrzymywanych przez
   timed,
