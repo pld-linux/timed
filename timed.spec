@@ -4,15 +4,13 @@ Summary(fr):	Serveur horaire TCP/IP
 Summary(pl):	Serwer us³ugi umo¿liwiaj±cej synchronizacjê czasu miêdzy komputerami
 Summary(tr):	TCP/IP günün saati sunucusu
 Name:		timed
-Version:	0.10
-Release:	24
+Version:	0.16
+Release:	3
 Copyright:	BSD
 Group:		Daemons
-Group(pl):	Serwery
+Group(pl):	Servery
 Source:		ftp://sunsite.unc.edu/pub/Linux/system/admin/time/netkit-timed-%{version}.tar.gz
-Patch0:		netkit-timed-misc.patch
-Patch1:		timed-ifr.patch
-Patch2:		timed-maint.patch
+Patch0:		netkit-timed-cflags.patch
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -39,11 +37,11 @@ simple du temps à travers un réseau.
 %description -l pl
 Pakiet timed zawiera serwer us³ugi serwujacej bierz±cy czas o nazwie timed i
 program timedc umo¿liwiaj±ce kontrolê programu timed. Program timedc
-umozliwia min.:
+umoúliwia min.:
 
-- pomiar w ustawienaich czas miedzy komputerami,
-- odszukiwanie nadrzednych serwerów czau,
-- w³±czanie i wy³aczanie ¶ledzenia komunikatów otrzymywanych przez timed,
+- pomiar w ustawienaich czasu miådzy komputerami,
+- odszukiwanie nadrzådnych serwerów czasu,
+- w³±czanie i wy³áczanie ¶ledzenia komunikatów otrzymywanych przez timed,
 - diagnostykê pracy timed.
  
 %description -l tr
@@ -52,12 +50,11 @@ saðlar. Bu, bir að üzerindeki çeþitli makinalarýn saatlerinin eþ
 tutulabilmeleri amacýyla kullanýlýr.
 
 %prep
-%setup -q -n netkit-timed-0.10
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
+%setup -q -n netkit-timed-%{version}
+%patch -p1
 
 %build
+./configure
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
