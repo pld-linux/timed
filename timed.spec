@@ -5,18 +5,19 @@ Summary(pl):	Serwer us³ugi umo¿liwiaj±cej synchronizacjê czasu miêdzy komputeram
 Summary(tr):	TCP/IP günün saati sunucusu
 Name:		timed
 Version:	0.17
-Release:	1
-Copyright:	BSD
+Release:	3
+License:	BSD
 Group:		Daemons
+Group(de):	Server
 Group(pl):	Serwery
-Source:		ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-timed-%{version}.tar.gz
+Source0:	ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The timed package contains the timed daemon and the timedc program for
-controlling the timed program. Timed synchronizes its host machine's time
-with the time on other local network machines. The timedc program is used
-to control and configure the operation of timed and allow:
+controlling the timed program. Timed synchronizes its host machine's
+time with the time on other local network machines. The timedc program
+is used to control and configure the operation of timed and allow:
 
  - measure the differences between machines' clocks,
  - find the location where the master time server is running,
@@ -24,35 +25,37 @@ to control and configure the operation of timed and allow:
  - perform various debugging actions.
 
 %description -l de
-Dieser Server mit Zeitgeber ermöglicht es einem entfernten Rechner, die
-Uhrzeit des Rechners abzufragen, auf dem der Server läuft. So können Sie auf
-einfache Weise die Uhrzeit im gesamten Netzwerk synchronisieren.
+Dieser Server mit Zeitgeber ermöglicht es einem entfernten Rechner,
+die Uhrzeit des Rechners abzufragen, auf dem der Server läuft. So
+können Sie auf einfache Weise die Uhrzeit im gesamten Netzwerk
+synchronisieren.
 
 %description -l fr
-Ce serveur timed permet aux machines distantes de demander la date du jour à
-la machine sur laquelle tourne le serveur. Ceci permet une synchronisation
-simple du temps à travers un réseau.
+Ce serveur timed permet aux machines distantes de demander la date du
+jour à la machine sur laquelle tourne le serveur. Ceci permet une
+synchronisation simple du temps à travers un réseau.
 
 %description -l pl
-Pakiet timed zawiera serwer us³ugi serwujacej bierz±cy czas o nazwie timed i
-program timedc umo¿liwiaj±ce kontrolê programu timed. Program timedc
-umo¿liwia min.:
+Pakiet timed zawiera serwer us³ugi serwujacej bierz±cy czas o nazwie
+timed i program timedc umo¿liwiaj±ce kontrolê programu timed. Program
+timedc umo¿liwia min.:
 
 - pomiar w ustawienaich czasu miådzy komputerami,
 - odszukiwanie nadrzådnych serwerów czasu,
-- w³±czanie i wy³áczanie ¶ledzenia komunikatów otrzymywanych przez timed,
+- w³±czanie i wy³áczanie ¶ledzenia komunikatów otrzymywanych przez
+  timed,
 - diagnostykê pracy timed.
- 
+
 %description -l tr
-timed sunucusu uzak makinelerin sunucuya baðlanarak zamaný öðrenmelerini
-saðlar. Bu, bir að üzerindeki çeþitli makinalarýn saatlerinin eþ
-tutulabilmeleri amacýyla kullanýlýr.
+timed sunucusu uzak makinelerin sunucuya baðlanarak zamaný
+öðrenmelerini saðlar. Bu, bir að üzerindeki çeþitli makinalarýn
+saatlerinin eþ tutulabilmeleri amacýyla kullanýlýr.
 
 %prep
 %setup -q -n netkit-timed-%{version}
 
 %build
-CFLAGS=$RPM_OPT_FLAGS ; export CFLAGS
+CFLAGS=%{rpmcflags}; export CFLAGS
 ./configure --with-c-compiler=gcc
 %{__make}
 
