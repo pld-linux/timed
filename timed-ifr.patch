@@ -1,0 +1,12 @@
+--- netkit-timed-0.10/timed/timed/timed.c.ifr	Thu Aug 29 15:53:15 1996
++++ netkit-timed-0.10/timed/timed/timed.c	Sat Apr 17 13:14:04 1999
+@@ -405,8 +405,7 @@
+ #define size(p)	max((p).sa_len, sizeof(p))
+ #endif
+ 	cplim = buf + ifc.ifc_len; /*skip over if's with big ifr_addr's */
+-	for (cp = buf; cp < cplim;
+-			cp += sizeof (ifr->ifr_name) + sizeof(ifr->ifr_addr)) {
++	for (cp = buf; cp < cplim; cp += sizeof (struct ifreq)) {
+ 		ifr = (struct ifreq *)cp;
+ 		if (ifr->ifr_addr.sa_family != AF_INET)
+ 			continue;

@@ -1,0 +1,9 @@
+--- netkit-timed-0.10/README.maint	Sat Apr 17 13:06:08 1999
++++ netkit-timed-0.10/README	Sat Apr 17 13:06:32 1999
+@@ -68,5 +68,5 @@
+ 	are including fixes. :-)
+ 
+ 
+-David A. Holland	dholland@hcs.harvard.edu
++David A. Holland	netbug@ftp.uk.linux.org
+ 								8-Mar-1997
