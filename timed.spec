@@ -8,7 +8,7 @@ Version:	0.10
 Release:	24
 Copyright:	BSD
 Group:		Daemons
-Group(pl):	Servery
+Group(pl):	Serwery
 Source:		ftp://sunsite.unc.edu/pub/Linux/system/admin/time/netkit-timed-%{version}.tar.gz
 Patch0:		netkit-timed-misc.patch
 Patch1:		timed-ifr.patch
