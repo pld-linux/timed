@@ -39,13 +39,13 @@ jour à la machine sur laquelle tourne le serveur. Ceci permet une
 synchronisation simple du temps à travers un réseau.
 
 %description -l pl
-Pakiet timed zawiera serwer us³ugi serwujacej bierz±cy czas o nazwie
+Pakiet timed zawiera serwer us³ugi serwuj±cej bierz±cy czas o nazwie
 timed i program timedc umo¿liwiaj±ce kontrolê programu timed. Program
-timedc umo¿liwia min.:
+timedc umo¿liwia m.in.:
 
-- pomiar w ustawienaich czasu miådzy komputerami,
-- odszukiwanie nadrzådnych serwerów czasu,
-- w³±czanie i wy³áczanie ¶ledzenia komunikatów otrzymywanych przez
+- pomiar w ustawienaich czasu miêdzy komputerami,
+- odszukiwanie nadrzêdnych serwerów czasu,
+- w³±czanie i wy³±czanie ¶ledzenia komunikatów otrzymywanych przez
   timed,
 - diagnostykê pracy timed.
 
@@ -71,8 +71,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_sbindir},%{_mandir}/man{1,8}}
 %{__make} install \
 	INSTALLROOT=$RPM_BUILD_ROOT \
 	MANDIR=%{_mandir}
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
