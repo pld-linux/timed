@@ -1,5 +1,5 @@
 Summary:	Programs for maintaining networked machines' time synchronization
-Summary(de):	TCP/IP-Time-of-Day-Server 
+Summary(de):	TCP/IP-Time-of-Day-Server
 Summary(fr):	Serveur horaire TCP/IP
 Summary(pl):	Serwer us³ugi umo¿liwiaj±cej synchronizacjê czasu miêdzy komputerami
 Summary(tr):	TCP/IP günün saati sunucusu
