@@ -11,7 +11,7 @@ Group:		Daemons
 Group(pl):	Servery
 Source:		ftp://sunsite.unc.edu/pub/Linux/system/admin/time/netkit-timed-%{version}.tar.gz
 Patch0:		netkit-timed-cflags.patch
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The timed package contains the timed daemon and the timedc program for
