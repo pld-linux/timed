@@ -5,7 +5,7 @@ Summary(pl):	Serwer us³ugi umo¿liwiaj±cej synchronizacjê czasu miêdzy komputeram
 Summary(tr):	TCP/IP günün saati sunucusu
 Name:		timed
 Version:	0.17
-Release:	4
+Release:	5
 License:	BSD
 Group:		Daemons
 Source0:	ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-%{name}-%{version}.tar.gz
