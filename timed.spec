@@ -74,7 +74,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_sbindir}/timed
-%attr(700,root,root) %{_sbindir}/timedc
-%{_mandir}/man8/timed.8*
-%{_mandir}/man8/timedc.8*
+%attr(755,root,root) %{_sbindir}/*
+%{_mandir}/man8/*
