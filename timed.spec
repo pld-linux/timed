@@ -36,7 +36,7 @@ simple du temps à travers un réseau.
 %description -l pl
 Pakiet timed zawiera serwer us³ugi serwujacej bierz±cy czas o nazwie timed i
 program timedc umo¿liwiaj±ce kontrolê programu timed. Program timedc
-umoúliwia min.:
+umo¿liwia min.:
 
 - pomiar w ustawienaich czasu miådzy komputerami,
 - odszukiwanie nadrzådnych serwerów czasu,
