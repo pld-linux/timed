@@ -72,8 +72,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_sbindir},%{_mandir}/man{1,8}}
 	INSTALLROOT=$RPM_BUILD_ROOT \
 	MANDIR=%{_mandir}
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_sbindir}/*
-
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 
 %clean
