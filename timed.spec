@@ -9,6 +9,7 @@ Release:	4
 License:	BSD
 Group:		Daemons
 Source0:	ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-%{name}-%{version}.tar.gz
+# Source0-md5:	1bffb4db753d9e5be227e444cf119bfe
 Patch0:		%{name}-gcc2.96.patch
 Patch1:		%{name}-DoS.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
