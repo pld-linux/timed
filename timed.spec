@@ -39,7 +39,7 @@ jour à la machine sur laquelle tourne le serveur. Ceci permet une
 synchronisation simple du temps à travers un réseau.
 
 %description -l pl
-Pakiet timed zawiera serwer us³ugi serwuj±cej bierz±cy czas o nazwie
+Pakiet timed zawiera serwer us³ugi serwuj±cej bie¿±cy czas o nazwie
 timed i program timedc umo¿liwiaj±ce kontrolê programu timed. Program
 timedc umo¿liwia m.in.:
 
