@@ -8,7 +8,7 @@ Version:	0.16
 Release:	3
 Copyright:	BSD
 Group:		Daemons
-Group(pl):	Servery
+Group(pl):	Serwery
 Source:		ftp://sunsite.unc.edu/pub/Linux/system/admin/time/netkit-timed-%{version}.tar.gz
 Patch0:		netkit-timed-cflags.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
