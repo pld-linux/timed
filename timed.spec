@@ -5,11 +5,23 @@ Summary(pl):	Serwer us³ugi umo¿liwiaj±cej synchronizacjê czasu miêdzy komputeram
 Summary(tr):	TCP/IP günün saati sunucusu
 Name:		timed
 Version:	0.17
-Release:	3
+Release:	4
 License:	BSD
 Group:		Daemons
+Group(cs):	Démoni
+Group(da):	Dæmoner
 Group(de):	Server
+Group(es):	Servidores
+Group(fr):	Serveurs
+Group(is):	Púkar
+Group(it):	Demoni
+Group(ja):	¥Ç¡¼¥â¥ó
+Group(no):	Daemoner
 Group(pl):	Serwery
+Group(pt):	Servidores
+Group(ru):	äÅÍÏÎÙ
+Group(sl):	Stre¾niki
+Group(sv):	Demoner
 Source0:	ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-%{name}-%{version}.tar.gz
 Patch0:		%{name}-gcc2.96.patch
 Patch1:		%{name}-DoS.patch
