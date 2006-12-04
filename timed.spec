@@ -12,8 +12,8 @@ Source0:	ftp://ftp.linux.org.uk/pub/linux/Networking/netkit/netkit-%{name}-%{ver
 # Source0-md5:	1bffb4db753d9e5be227e444cf119bfe
 Patch0:		%{name}-gcc2.96.patch
 Patch1:		%{name}-DoS.patch
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	intimed
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The timed package contains the timed daemon and the timedc program for
@@ -60,8 +60,9 @@ saatlerinin eþ tutulabilmeleri amacýyla kullanýlýr.
 
 %build
 CFLAGS="%{rpmcflags}"; export CFLAGS
-./configure --with-c-compiler=gcc
-%{__make}
+./configure
+%{__make} \
+	CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
