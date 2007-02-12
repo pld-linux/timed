@@ -1,8 +1,8 @@
 Summary:	Programs for maintaining networked machines' time synchronization
-Summary(de.UTF-8):   TCP/IP-Time-of-Day-Server
-Summary(fr.UTF-8):   Serveur horaire TCP/IP
-Summary(pl.UTF-8):   Serwer usługi umożliwiającej synchronizację czasu między komputerami
-Summary(tr.UTF-8):   TCP/IP günün saati sunucusu
+Summary(de.UTF-8):	TCP/IP-Time-of-Day-Server
+Summary(fr.UTF-8):	Serveur horaire TCP/IP
+Summary(pl.UTF-8):	Serwer usługi umożliwiającej synchronizację czasu między komputerami
+Summary(tr.UTF-8):	TCP/IP günün saati sunucusu
 Name:		timed
 Version:	0.17
 Release:	5
