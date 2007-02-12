@@ -1,8 +1,8 @@
 Summary:	Programs for maintaining networked machines' time synchronization
-Summary(de):	TCP/IP-Time-of-Day-Server
-Summary(fr):	Serveur horaire TCP/IP
-Summary(pl):	Serwer us³ugi umo¿liwiaj±cej synchronizacjê czasu miêdzy komputerami
-Summary(tr):	TCP/IP günün saati sunucusu
+Summary(de.UTF-8):   TCP/IP-Time-of-Day-Server
+Summary(fr.UTF-8):   Serveur horaire TCP/IP
+Summary(pl.UTF-8):   Serwer usÅ‚ugi umoÅ¼liwiajÄ…cej synchronizacjÄ™ czasu miÄ™dzy komputerami
+Summary(tr.UTF-8):   TCP/IP gÃ¼nÃ¼n saati sunucusu
 Name:		timed
 Version:	0.17
 Release:	5
@@ -26,32 +26,32 @@ is used to control and configure the operation of timed and allow:
  - enable or disable tracing of messages received by timed,
  - perform various debugging actions.
 
-%description -l de
-Dieser Server mit Zeitgeber ermöglicht es einem entfernten Rechner,
-die Uhrzeit des Rechners abzufragen, auf dem der Server läuft. So
-können Sie auf einfache Weise die Uhrzeit im gesamten Netzwerk
+%description -l de.UTF-8
+Dieser Server mit Zeitgeber ermÃ¶glicht es einem entfernten Rechner,
+die Uhrzeit des Rechners abzufragen, auf dem der Server lÃ¤uft. So
+kÃ¶nnen Sie auf einfache Weise die Uhrzeit im gesamten Netzwerk
 synchronisieren.
 
-%description -l fr
+%description -l fr.UTF-8
 Ce serveur timed permet aux machines distantes de demander la date du
-jour à la machine sur laquelle tourne le serveur. Ceci permet une
-synchronisation simple du temps à travers un réseau.
+jour Ã  la machine sur laquelle tourne le serveur. Ceci permet une
+synchronisation simple du temps Ã  travers un rÃ©seau.
 
-%description -l pl
-Pakiet timed zawiera serwer us³ugi serwuj±cej bie¿±cy czas o nazwie
-timed i program timedc umo¿liwiaj±ce kontrolê programu timed. Program
-timedc umo¿liwia m.in.:
+%description -l pl.UTF-8
+Pakiet timed zawiera serwer usÅ‚ugi serwujÄ…cej bieÅ¼Ä…cy czas o nazwie
+timed i program timedc umoÅ¼liwiajÄ…ce kontrolÄ™ programu timed. Program
+timedc umoÅ¼liwia m.in.:
 
-- pomiar w ustawieniach czasu miêdzy komputerami,
-- odszukiwanie nadrzêdnych serwerów czasu,
-- w³±czanie i wy³±czanie ¶ledzenia komunikatów otrzymywanych przez
+- pomiar w ustawieniach czasu miÄ™dzy komputerami,
+- odszukiwanie nadrzÄ™dnych serwerÃ³w czasu,
+- wÅ‚Ä…czanie i wyÅ‚Ä…czanie Å›ledzenia komunikatÃ³w otrzymywanych przez
   timed,
-- diagnostykê pracy timed.
+- diagnostykÄ™ pracy timed.
 
-%description -l tr
-timed sunucusu uzak makinelerin sunucuya bağlanarak zamanı
-öğrenmelerini sağlar. Bu, bir ağ üzerindeki çeşitli makinaların
-saatlerinin eş tutulabilmeleri amacıyla kullanılır.
+%description -l tr.UTF-8
+timed sunucusu uzak makinelerin sunucuya baÄŸlanarak zamanÄ±
+Ã¶ÄŸrenmelerini saÄŸlar. Bu, bir aÄŸ Ã¼zerindeki Ã§eÅŸitli makinalarÄ±n
+saatlerinin eÅŸ tutulabilmeleri amacÄ±yla kullanÄ±lÄ±r.
 
 %prep
 %setup -q -n netkit-timed-%{version}
