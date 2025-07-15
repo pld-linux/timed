@@ -55,8 +55,8 @@ saatlerinin eş tutulabilmeleri amacıyla kullanılır.
 
 %prep
 %setup -q -n netkit-timed-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 CFLAGS="%{rpmcflags}"; export CFLAGS
